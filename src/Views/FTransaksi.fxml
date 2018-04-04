@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FTransaksiController">
+   <children>
+      <TextField id="id_kode_barang" fx:id="input_kode_barang" prefHeight="38.0" prefWidth="184.0" promptText="Kode Barang" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="74.0" />
+      <TextField fx:id="input_nama_barang" disable="true" editable="false" prefHeight="38.0" prefWidth="197.0" promptText="Nama Barang" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="188.0" AnchorPane.topAnchor="74.0" />
+      <TextField fx:id="input_jumlah_barang" onAction="#addToCart" prefHeight="38.0" prefWidth="168.0" promptText="Jumlah" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="74.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rp." AnchorPane.bottomAnchor="341.7177734375" AnchorPane.leftAnchor="13.29345703125" AnchorPane.topAnchor="14.3896484375">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Button cacheShape="false" mnemonicParsing="false" prefHeight="44.0" prefWidth="127.0" text="Button" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="23.0" />
+      <Text fx:id="label_total_harga" layoutX="76.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2018 5:01:07 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.TempTransaksiDetails" table="temp_transaksi_details" catalog="posapp" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="barangs" class="Model.Barangs" fetch="select">
+            <column name="barang_id" />
+        </many-to-one>
+        <many-to-one name="tempTransaksis" class="Model.TempTransaksis" fetch="select">
+            <column name="temp_transaksis_id" />
+        </many-to-one>
+        <property name="jumlahBarang" type="int">
+            <column name="jumlah_barang" not-null="true" />
+        </property>
+        <property name="totalHarga" type="int">
+            <column name="total_harga" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
